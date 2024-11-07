@@ -35,7 +35,7 @@ public class Coin implements Runnable {
     private void loadFrames() {
         frames = new BufferedImage[4];
         try {
-            BufferedImage coinSheet = ImageIO.read(getClass().getResource("../item/Coin (16 x 16).png"));
+            BufferedImage coinSheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/item/Coin (16 x 16).png"));
             for (int i = 0; i < frames.length; i++) {
                 frames[i] = coinSheet.getSubimage(i * 16, 0, 16, 16);
             }

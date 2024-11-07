@@ -36,7 +36,7 @@ public class Fireball implements Runnable {
      
         frames = new BufferedImage[4];
         try {
-            BufferedImage fireballSpritesheet = ImageIO.read(getClass().getResource("../character/Magical_Orbs_Spell_(32 x 32).png"));
+            BufferedImage fireballSpritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Magical_Orbs_Spell_(32 x 32).png"));
             for (int i = 0; i < 4; i++) {
                 frames[i] = fireballSpritesheet.getSubimage(i * 32, 0, 32, 32); 
             }

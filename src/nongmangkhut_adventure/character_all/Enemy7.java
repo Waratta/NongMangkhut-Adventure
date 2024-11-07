@@ -37,9 +37,9 @@ public class Enemy7 implements Runnable, Damageable {
     public Enemy7(int startX, int startY, Character player) {
         this.x = startX;
         this.y = startY;
-        this.width = 64; // Set width of the enemy
-        this.height = 64; // Set height of the enemy
-        this.health = 800; // Initial health points
+        this.width = 120; // Set width of the enemy
+        this.height = 120; // Set height of the enemy
+        this.health = 200; // Initial health points
         this.speed = 1; // Movement speed
         this.detectionRange = 100; // Detection range for the player
         this.attackRange = 20;
@@ -58,7 +58,7 @@ public class Enemy7 implements Runnable, Damageable {
     private void loadAnimationFrames() {
         frames = new BufferedImage[6]; // Assuming there are 12 frames for walking
         try {
-            BufferedImage crawlSpritesheet = ImageIO.read(getClass().getResource("../character/Idle_(32 x 32).png"));
+            BufferedImage crawlSpritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Idle_(32 x 32).png"));
             for (int i = 0; i < frames.length; i++) {
                 frames[i] = crawlSpritesheet.getSubimage(i * 32, 0, 32, 32);
             }
@@ -71,7 +71,7 @@ public class Enemy7 implements Runnable, Damageable {
     private void loadAttackAnimationFrames() {
         attackFrames = new BufferedImage[8]; // 6 frames for attacking animation
         try {
-            BufferedImage attackSpritesheet = ImageIO.read(getClass().getResource("../character/Punching_(48 x 32).png"));
+            BufferedImage attackSpritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Punching_(48 x 32).png"));
             for (int i = 0; i < attackFrames.length; i++) {
                 attackFrames[i] = attackSpritesheet.getSubimage(i * 48, 0, 48, 32);
             }
@@ -193,7 +193,7 @@ public class Enemy7 implements Runnable, Damageable {
                 g2d.drawImage(attackFrames[attackFrame], (int) x, (int) y, width, height, null); // Draw attack animation
             } else {
                 // Draw the enemy facing the direction it is moving
-                if (movementDirection > 0) {
+                if (movementDirection < 0) {
                     g2d.drawImage(frames[currentFrame], (int) x + width, (int) y, -width, height, null); // Move left (flipped)
                 } else {
                     g2d.drawImage(frames[currentFrame], (int) x, (int) y, width, height, null); // Move right

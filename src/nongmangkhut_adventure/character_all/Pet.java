@@ -30,7 +30,7 @@ public class Pet implements Runnable {
 
         // Load spritesheet for the pet
         try {
-            BufferedImage petSpritesheet = ImageIO.read(getClass().getResource("../character/Walking_(48 x 32).png"));
+            BufferedImage petSpritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Walking_(48 x 32).png"));
             walkFrames = new BufferedImage[4]; // Number of walking frames
             for (int i = 0; i < 4; i++) {
                 walkFrames[i] = petSpritesheet.getSubimage(i * 48, 0, 48, 32); // Set walking frames

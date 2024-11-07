@@ -25,7 +25,7 @@ public class ScoreIndicator {
     private void loadCoinImage() {
         try {
             // Load spritesheet image
-            BufferedImage spritesheet = ImageIO.read(getClass().getResource("../item/Coin (16 x 16).png"));
+            BufferedImage spritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/item/Coin (16 x 16).png"));
             // Extract frame 0 (top-left corner)
             coinImage = spritesheet.getSubimage(0, 0, 16, 16); // Specify start position (0,0) and size (16x16)
         } catch (IOException e) {

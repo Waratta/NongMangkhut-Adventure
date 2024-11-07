@@ -40,7 +40,7 @@ public class Enemy8 implements Runnable, Damageable {
         this.y = startY;
         this.width = 120; // Set width of the enemy
         this.height = 120; // Set height of the enemy
-        this.health = 1000; // Initial health points
+        this.health = 200; // Initial health points
         this.collected = false;
         this.speed = 3; // Movement speed
         this.detectionRange = 120; // Detection range for the player
@@ -68,7 +68,7 @@ public class Enemy8 implements Runnable, Damageable {
     private void loadAnimationFrames() {
         frames = new BufferedImage[4]; // Assuming there are 12 frames for walking
         try {
-            BufferedImage crawlSpritesheet = ImageIO.read(getClass().getResource("../character/Running (16 x 16).png"));
+            BufferedImage crawlSpritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Running (16 x 16).png"));
             for (int i = 0; i < frames.length; i++) {
                 frames[i] = crawlSpritesheet.getSubimage(i * 16, 0, 16, 16);
             }
@@ -81,7 +81,7 @@ public class Enemy8 implements Runnable, Damageable {
     private void loadAttackAnimationFrames() {
         attackFrames = new BufferedImage[1]; // 6 frames for attacking animation
         try {
-            BufferedImage attackSpritesheet = ImageIO.read(getClass().getResource("../character/Hurt (16 x 16).png"));
+            BufferedImage attackSpritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Hurt (16 x 16).png"));
             for (int i = 0; i < attackFrames.length; i++) {
                 attackFrames[i] = attackSpritesheet.getSubimage(i * 16, 0, 16, 16);
             }
@@ -128,7 +128,7 @@ public class Enemy8 implements Runnable, Damageable {
 
     private void patrol() {
         // Randomly change direction every few seconds
-        if (random.nextInt(100) < 5) {
+        if (random.nextInt(50) < 5) {
             movementDirection *= -1; // Change direction randomly
         }
         x += speed * movementDirection; // Move in the current direction

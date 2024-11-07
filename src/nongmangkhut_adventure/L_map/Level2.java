@@ -81,20 +81,20 @@ public class Level2 implements Runnable {
             {0, 0, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0,0,0,0,0,0,0,0,0,0},
             {0, 0, 0, 0, 0,},
             {0, 0, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0, 0, 1, 1, 1, 0,0 ,0,0,0,0,0,0,0,0,0},
-            {1, 1, 1, 1, 1, 1, 1, 1,0,0,0,0,0,0,0,0,0,0},
+            {0, 0, 0, 0, 0, 0, 1, 1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0},
+            {0, 0, 0, 0, 0,},
+            {0, 0, 0, 0, 0,},
             {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},};
     }
 
     // Initialize health items with specified coordinates
     private List<HealthItem> createHealthItems() {
         List<HealthItem> healthItems = new ArrayList<>();
-        healthItems.add(new HealthItem(500, 650)); // Add health item at (800, 650)
+        healthItems.add(new HealthItem(500, 750)); // Add health item at (800, 650)
         // Add more health items as needed
         return healthItems;
     }
@@ -103,7 +103,7 @@ public class Level2 implements Runnable {
     private List<Enemy> createEnemies() {
         List<Enemy> enemies = new ArrayList<>();
       //  enemies.add(new Enemy(100, 915, mainCharacter)); // First enemy at (100, 650)
-          enemies.add(new Enemy(400, 650, mainCharacter)); // Second enemy at (500, 650)
+          enemies.add(new Enemy(600, 720, mainCharacter)); // Second enemy at (500, 650)
         // Add more enemies as needed
         return enemies;
     }
@@ -158,7 +158,7 @@ public class Level2 implements Runnable {
 
     private List<Enemy7> createEnemies7() {
         List<Enemy7> enemies7 = new ArrayList<>();
-       enemies7.add(new Enemy7(800, 700, mainCharacter)); // First enemy at (100, 650)
+       enemies7.add(new Enemy7(800, 665, mainCharacter)); // First enemy at (100, 650)
 
         // Add more enemies as needed
         return enemies7;
@@ -198,15 +198,20 @@ public class Level2 implements Runnable {
         List<Coin> coins = new ArrayList<>();
        // coins.add(new Coin(400, 920)); // Add a coin at (400, 600)
        // coins.add(new Coin(700, 600)); // Add another coin at (700, 600)
-        coins.add(new Coin(740, 650));
-       coins.add(new Coin(780, 650));
+        coins.add(new Coin(660,550));
+        coins.add(new Coin(700,550));
+        coins.add(new Coin(740,550));
+       coins.add(new Coin(780, 550));
+        coins.add(new Coin(820,550));
         // Add more coins as needed
         return coins;
     }
 
     private List<SilverCoin> createSilverCoins() {
         List<SilverCoin> silverCoins = new ArrayList<>();
-        silverCoins.add(new SilverCoin(800, 650)); 
+        silverCoins.add(new SilverCoin(800, 750)); 
+         silverCoins.add(new SilverCoin(840, 750)); 
+          silverCoins.add(new SilverCoin(880, 750)); 
         //silverCoins.add(new SilverCoin(600, 650)); 
     
         return silverCoins;
@@ -222,7 +227,7 @@ public class Level2 implements Runnable {
 
     private List<ChocolateBar> createChocolateBars() {
         List<ChocolateBar> chocolateBars = new ArrayList<>();
-       chocolateBars.add(new ChocolateBar(700, 650)); // Example position
+       chocolateBars.add(new ChocolateBar(700, 750)); // Example position
         // Add more chocolate bars as needed
         return chocolateBars;
     }

@@ -36,7 +36,7 @@ public class SilverCoin implements Runnable {
         frames = new BufferedImage[4]; // Adjust the number of frames as needed
         try {
             // Load the sprite sheet containing the coin frames
-            BufferedImage coinSheet = ImageIO.read(getClass().getResource("../item/Small_Coin (16 x 16).png"));
+            BufferedImage coinSheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/item/Small_Coin (16 x 16).png"));
 
             // Loop through each frame and extract it from the sprite sheet
             for (int i = 0; i < frames.length; i++) {

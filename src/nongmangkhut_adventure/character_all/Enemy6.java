@@ -40,7 +40,7 @@ public class Enemy6 implements Runnable, Damageable {
         this.y = startY;
         this.width = 120; // Set width of the enemy
         this.height = 120; // Set height of the enemy
-        this.health = 1000; // Initial health points
+        this.health = 200; // Initial health points
         this.collected = false;
         this.speed = 3; // Movement speed
         this.detectionRange = 100; // Detection range for the player
@@ -68,7 +68,7 @@ public class Enemy6 implements Runnable, Damageable {
     private void loadAnimationFrames() {
         frames = new BufferedImage[6]; // Assuming there are 12 frames for walking
         try {
-            BufferedImage crawlSpritesheet = ImageIO.read(getClass().getResource("../character/Flight_Start-up_(32 x 32).png"));
+            BufferedImage crawlSpritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Flight_Start-up_(32 x 32).png"));
             for (int i = 0; i < frames.length; i++) {
                 frames[i] = crawlSpritesheet.getSubimage(i * 32, 0, 32, 32);
             }
@@ -81,7 +81,7 @@ public class Enemy6 implements Runnable, Damageable {
     private void loadAttackAnimationFrames() {
         attackFrames = new BufferedImage[2]; // 6 frames for attacking animation
         try {
-            BufferedImage attackSpritesheet = ImageIO.read(getClass().getResource("../character/2Flying_(32 x 32).png"));
+            BufferedImage attackSpritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/2Flying_(32 x 32).png"));
             for (int i = 0; i < attackFrames.length; i++) {
                 attackFrames[i] = attackSpritesheet.getSubimage(i * 32, 0, 32, 32);
             }

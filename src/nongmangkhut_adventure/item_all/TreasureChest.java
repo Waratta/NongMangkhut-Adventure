@@ -36,7 +36,7 @@ public class TreasureChest implements Runnable {
         frames = new BufferedImage[3]; // Number of frames for the treasure chest
         try {
             // Load the sprite sheet containing the treasure chest frames
-            BufferedImage chestSheet = ImageIO.read(getClass().getResource("../item/Treasure_Chest (32 x 16).png"));
+            BufferedImage chestSheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/item/Treasure_Chest (32 x 16).png"));
 
             // Loop through each frame and extract it from the sprite sheet
             for (int i = 0; i < frames.length; i++) {

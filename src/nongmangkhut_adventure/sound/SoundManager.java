@@ -1,7 +1,7 @@
 package nongmangkhut_adventure.sound;
 
-
-import java.io.File;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.io.IOException;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -19,8 +19,19 @@ public class SoundManager {
                 clip.stop();
             }
 
-            File file = new File(getClass().getResource(soundFile).getFile());
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+            // ใช้ getResourceAsStream เพื่อโหลดไฟล์เสียงจาก resources
+            InputStream soundStream = getClass().getResourceAsStream("/nongmangkhut_adventure/sound/" + soundFile);
+            if (soundStream == null) {
+                System.err.println("Error: Sound file not found: " + soundFile);
+                return;
+            }
+
+            // Read the input stream into a byte array and then into a ByteArrayInputStream
+            byte[] audioBytes = soundStream.readAllBytes();
+            ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(audioBytes);
+
+            // Create an AudioInputStream from the ByteArrayInputStream
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(byteArrayInputStream);
             clip = AudioSystem.getClip();
             clip.open(audioStream);
             clip.start();

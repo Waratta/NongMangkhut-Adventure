@@ -56,7 +56,7 @@ public class Enemy1 implements Runnable, Damageable {
     private void loadAnimationFrames() {
         frames = new BufferedImage[12]; // Assuming there are 12 frames for walking
         try {
-            BufferedImage crawlSpritesheet = ImageIO.read(getClass().getResource("../character/Walking_&_Blink_(64 x 32).png"));
+            BufferedImage crawlSpritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Walking_&_Blink_(64 x 32).png"));
             for (int i = 0; i < frames.length; i++) {
                 frames[i] = crawlSpritesheet.getSubimage(i * 64, 0, 64, 32);
             }
@@ -69,7 +69,7 @@ public class Enemy1 implements Runnable, Damageable {
     private void loadAttackAnimationFrames() {
         attackFrames = new BufferedImage[6]; // 6 frames for attacking animation
         try {
-            BufferedImage attackSpritesheet = ImageIO.read(getClass().getResource("../character/Spear_Jab_(64 x 32).png"));
+            BufferedImage attackSpritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Spear_Jab_(64 x 32).png"));
             for (int i = 0; i < attackFrames.length; i++) {
                 attackFrames[i] = attackSpritesheet.getSubimage(i * 64, 0, 64, 32);
             }

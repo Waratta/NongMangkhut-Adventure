@@ -54,19 +54,19 @@ public class Character implements Runnable, Damageable {
         this.score = 0;
         try {
             // Load spritesheet
-            spritesheet = ImageIO.read(getClass().getResource("../character/Running_(32 x 32).png"));
+            spritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Running_(32 x 32).png"));
             runFrames = new BufferedImage[6];
             for (int i = 0; i < 6; i++) {
                 runFrames[i] = spritesheet.getSubimage(i * 32, 0, 32, 32);
             }
-            jumpFrame = new ImageIcon(getClass().getResource("../character/Jumping_1.png")).getImage();
+            jumpFrame = new ImageIcon(getClass().getResource("/nongmangkhut_adventure/character/Jumping_1.png")).getImage();
             attackFrames = new BufferedImage[4];
-            BufferedImage attackSheet = ImageIO.read(getClass().getResource("../character/Casting_Spell_Aerial_(32 x 32).png"));
+            BufferedImage attackSheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Casting_Spell_Aerial_(32 x 32).png"));
             for (int i = 0; i < 4; i++) {
                 attackFrames[i] = attackSheet.getSubimage(i * 32, 0, 32, 32);
             }
             // Load death frame
-            deathFrame = ImageIO.read(getClass().getResource("../character/Ducking_(32 x 32).png"));
+            deathFrame = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Ducking_(32 x 32).png"));
         } catch (IOException e) {
             e.printStackTrace();
         }

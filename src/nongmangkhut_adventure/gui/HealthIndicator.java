@@ -23,7 +23,7 @@ public class HealthIndicator {
     private void loadHeartImages() {
         heartFrames = new BufferedImage[2]; // 2 frames for healthy and damaged hearts
         try {
-            BufferedImage heartSpriteSheet = ImageIO.read(getClass().getResource("../item/Health_Indicator_Black_Outline (8 x 8).png"));
+            BufferedImage heartSpriteSheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/item/Health_Indicator_Black_Outline (8 x 8).png"));
             // Subimage for healthy heart (8x8)
             heartFrames[0] = heartSpriteSheet.getSubimage(0, 0, 8, 8); // Keep original size for subimage
             // Subimage for damaged heart (8x8)

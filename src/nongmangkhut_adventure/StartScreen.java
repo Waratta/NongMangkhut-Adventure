@@ -20,7 +20,7 @@ public class StartScreen extends JFrame implements ActionListener {
         customFont = loadCustomFont();
 
         // Load background image
-        backgroundImage = new ImageIcon(getClass().getResource("images/Asset 4.png")).getImage();
+        backgroundImage = new ImageIcon(getClass().getResource("/nongmangkhut_adventure/map/Asset 4.png")).getImage();
 
         // Set full screen
         GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
@@ -70,7 +70,7 @@ public class StartScreen extends JFrame implements ActionListener {
     private Font loadCustomFont() {
         try {
             // Load the font file from the fonts directory
-            return Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("./fonts/PixeloidSansBold-PKnYd.ttf")).deriveFont(24f);
+            return Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/nongmangkhut_adventure/fonts/PixeloidSansBold-PKnYd.ttf")).deriveFont(24f);
         } catch (FontFormatException | IOException e) {
             e.printStackTrace();
             return new Font("Pixeloid Sans", Font.BOLD, 24); // Fallback to default font if loading fails

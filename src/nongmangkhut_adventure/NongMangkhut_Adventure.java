@@ -105,7 +105,7 @@ public class NongMangkhut_Adventure extends JPanel implements KeyListener, Runna
         this.setLayout(null); // ใช้ Layout แบบ null เพื่อกำหนดตำแหน่งเอง
 
         // Load the background image
-        backgroundImage = new ImageIcon(getClass().getResource("images/Asset 4.png")).getImage();
+        backgroundImage = new ImageIcon(getClass().getResource("/nongmangkhut_adventure/map/Asset 4.png")).getImage();
 
         // Create and start the game thread
         running = true; // Set running to true before starting the thread
@@ -120,7 +120,7 @@ public class NongMangkhut_Adventure extends JPanel implements KeyListener, Runna
     private Font loadCustomFont() {
         try {
             // Load the font file from the fonts directory
-            return Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("./fonts/PixeloidSansBold-PKnYd.ttf")).deriveFont(24f);
+            return Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/nongmangkhut_adventure/fonts/PixeloidSansBold-PKnYd.ttf")).deriveFont(24f);
         } catch (FontFormatException | IOException e) {
             e.printStackTrace();
             return new Font("Pixeloid Sans", Font.BOLD, 24); // Fallback to default font if loading fails
@@ -134,7 +134,7 @@ public class NongMangkhut_Adventure extends JPanel implements KeyListener, Runna
         switch (levelIndex) {
             case 0:
                 Level1 level1 = new Level1(character); // Pass character instance to level
-                map = new Map(level1.getLayout(), MAP_WIDTH, MAP_HEIGHT,"../map/Terrain1.png");
+                map = new Map(level1.getLayout(), MAP_WIDTH, MAP_HEIGHT,"/nongmangkhut_adventure/map/Terrain1.png");
                 enemies = level1.getEnemies();  // Initialize enemies list
                 enemies1 = level1.getEnemies1();
                 enemies2 = level1.getEnemies2();
@@ -157,7 +157,7 @@ public class NongMangkhut_Adventure extends JPanel implements KeyListener, Runna
                 break;
             case 1:
                 Level2 level2 = new Level2(character);
-                map = new Map(Level2.getLayout(), MAP_WIDTH, MAP_HEIGHT,"../map/Terrain2.png");
+                map = new Map(Level2.getLayout(), MAP_WIDTH, MAP_HEIGHT,"/nongmangkhut_adventure/map/Terrain1.png");
                 enemies = level2.getEnemies();  // Initialize enemies list
                 enemies1 = level2.getEnemies1();
                 enemies2 = level2.getEnemies2();
@@ -179,7 +179,7 @@ public class NongMangkhut_Adventure extends JPanel implements KeyListener, Runna
                 break;
             case 2:
                 Level3 level3 = new Level3(character);
-                map = new Map(Level3.getLayout(), MAP_WIDTH, MAP_HEIGHT,"../map/Terrain3.png");
+                map = new Map(Level3.getLayout(), MAP_WIDTH, MAP_HEIGHT,"/nongmangkhut_adventure/map/Terrain1.png");
                 enemies = level3.getEnemies();  // Initialize enemies list
                 enemies1 = level3.getEnemies1();
                 enemies2 = level3.getEnemies2();

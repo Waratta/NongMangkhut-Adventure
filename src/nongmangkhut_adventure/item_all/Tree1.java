@@ -35,7 +35,7 @@ public class Tree1  {
     private void loadFrames() {
     
         try {
-               frames =ImageIO.read(getClass().getResource("../map/Grassland_entities (16 x 16).png"));
+               frames =ImageIO.read(getClass().getResource("/nongmangkhut_adventure/map/Grassland_entities (16 x 16).png"));
           
            
                 frames = frames.getSubimage( 64, 16, 64, 64);

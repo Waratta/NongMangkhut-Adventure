@@ -22,7 +22,7 @@ public class HealthItem {
 
     private void loadSprite() {
         try {
-            sprite = ImageIO.read(getClass().getResource("../item/Pancake_Stack (16 x 16).png"));
+            sprite = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/item/Pancake_Stack (16 x 16).png"));
             // Load your image here
             // Only use the first frame (0, 0)
             sprite = sprite.getSubimage(0, 0, 16, 16); // Get the single heart image

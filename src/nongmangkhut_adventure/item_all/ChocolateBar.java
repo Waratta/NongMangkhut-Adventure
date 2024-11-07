@@ -37,7 +37,7 @@ public class ChocolateBar implements Runnable {
         frames = new BufferedImage[2]; // Adjust the number of frames as needed
         try {
             // Load the sprite sheet containing the chocolate bar frames
-            BufferedImage chocolateSheet = ImageIO.read(getClass().getResource("../item/Chocolate_Bars (16 x 16).png"));
+            BufferedImage chocolateSheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/item/Chocolate_Bars (16 x 16).png"));
 
             // Loop through each frame and extract it from the sprite sheet
             for (int i = 0; i < frames.length; i++) {

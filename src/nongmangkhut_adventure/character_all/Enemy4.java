@@ -56,7 +56,7 @@ public class Enemy4 implements Runnable, Damageable {
     private void loadAnimationFrames() {
         frames = new BufferedImage[21]; // Assuming there are 12 frames for walking
         try {
-            BufferedImage crawlSpritesheet = ImageIO.read(getClass().getResource("../character/Idle_Flicker_(32 x 32).png"));
+            BufferedImage crawlSpritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Idle_Flicker_(32 x 32).png"));
             for (int i = 0; i < frames.length; i++) {
                 frames[i] = crawlSpritesheet.getSubimage(i * 32, 0, 32, 32);
             }
@@ -69,7 +69,7 @@ public class Enemy4 implements Runnable, Damageable {
     private void loadAttackAnimationFrames() {
         attackFrames = new BufferedImage[21]; // 6 frames for attacking animation
         try {
-            BufferedImage attackSpritesheet = ImageIO.read(getClass().getResource("../character/Idle_Flicker_(32 x 32).png"));
+            BufferedImage attackSpritesheet = ImageIO.read(getClass().getResource("/nongmangkhut_adventure/character/Idle_Flicker_(32 x 32).png"));
             for (int i = 0; i < attackFrames.length; i++) {
                 attackFrames[i] = attackSpritesheet.getSubimage(i * 32, 0, 32, 32);
             }
