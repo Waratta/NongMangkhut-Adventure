@@ -9,7 +9,7 @@ import nongmangkhut_adventure.L_map.Level1;
 import nongmangkhut_adventure.L_map.Level3;
 import java.awt.event.*;
 
-import nongmangkhut_adventure.gui.HealthIndicator;
+import nongmangkhut_adventure.gui.HealthIndicator;  
 import nongmangkhut_adventure.character_all.Enemy; // Import Enemy
 import nongmangkhut_adventure.character_all.Enemy1;
 import nongmangkhut_adventure.character_all.Enemy2;// Import Enemy

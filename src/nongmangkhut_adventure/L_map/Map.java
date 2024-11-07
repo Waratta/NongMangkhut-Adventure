@@ -46,7 +46,7 @@ public class Map {
         for (int row = 0; row < mapLayout.length; row++) {
             for (int col = 0; col < mapLayout[row].length; col++) {
                 if (mapLayout[row][col] == 1) { 
-                    Rectangle hitbox = new Rectangle(col * tileSize, row * tileSize + 5, tileSize, tileSize);
+                    Rectangle hitbox = new Rectangle(col * tileSize, row * tileSize + 15, tileSize, tileSize);
                     hitboxes.add(hitbox);
                 }
             }
@@ -67,7 +67,7 @@ public class Map {
 
                
                 if (row < mapLayout.length && col < mapLayout[row].length && mapLayout[row][col] != 0) {
-                    g.drawImage(tileImage, tileX, tileY, tileSize + 12, tileSize + 18, null);
+                    g.drawImage(tileImage, tileX, tileY, tileSize + 12, tileSize + 30, null);
                 }
             }
         }
